@@ -1,0 +1,11 @@
+.ADDelement {
+  /* Position the element relative to its closest positioned ancestor */
+  right: 0; /* Align the element to the right */
+  margin-top: 0px;
+  text-align: right;
+  margin-right: 30px;
+}
+
+.createUser {
+  margin-top: 20px;
+}
