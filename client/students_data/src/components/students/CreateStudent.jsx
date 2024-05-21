@@ -14,7 +14,8 @@ const CreateStudent = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-const navigate = useNavigate();
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -75,7 +76,7 @@ const navigate = useNavigate();
               className="form-control"
               type="text"
               name="email"
-              placeholder="First Name"
+              placeholder="Email ID"
               value={formData.email}
               onChange={handleChange}
               required

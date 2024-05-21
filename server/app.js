@@ -3,7 +3,7 @@ const app = express();
 const connectDB = require('./db/connection')
 require('dotenv').config()
 const cors = require('cors');
-
+const cookieParser = require('cookie-parser');
 const students = require('./routes/api_routes')
 
 const port = process.env.PORT || 8080;
@@ -13,6 +13,9 @@ app.use(express.json());
 app.use(express.static('./public'))
 // Use CORS middleware
 app.use(cors());
+
+
+app.use(cookieParser());
 
 
 const start = async () => {
@@ -26,7 +29,8 @@ const start = async () => {
 }
 
 start()
-//Routes 
 
+
+//Routes 
 app.use('/api/v1/students', students)
 
